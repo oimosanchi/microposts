@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get    'signup', to: 'users#new'
   get    'login' , to: 'sessions#new'
   post   'login' , to: 'sessions#create'
+  patch  'login' , to: 'sessions#update'
   delete 'logout', to: 'sessions#destroy'
    
   resources :users
