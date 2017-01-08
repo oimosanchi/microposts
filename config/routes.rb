@@ -6,7 +6,13 @@ Rails.application.routes.draw do
   patch  'login' , to: 'sessions#update'
   delete 'logout', to: 'sessions#destroy'
   
-  resources :users 
+  resources :users do
+    member do
+      get 'followings'
+      get 'followers'
+    end
+  end
+  
   resources :microposts
   resources :relationships, only: [:create, :destroy]
   

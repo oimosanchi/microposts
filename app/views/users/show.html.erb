@@ -16,4 +16,10 @@
       </ol>
     <% end %>
   </div>
+  <div>
+  <%= link_to "followings",followings_user_path(@user) %>
+  </div>
+  <div>
+    <%= link_to "followers", followers_user_path(@user) %>
+  </div>
 </div>
