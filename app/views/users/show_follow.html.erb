@@ -4,11 +4,9 @@
   </aside>
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
-    <% if @user.microposts.any? %>
-      <h3>Microposts (<%= @user.microposts.count %>)</h3>
-      <ol class="microposts">
-        <%= render @microposts %>
+      <h3><%= @title %> (<%= @users.count %>)</h3>
+      <ol class="users">
+        <%= render @users %>
       </ol>
-    <% end %>
   </div>
 </div>
